@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// Add prompt for the user to gather information needed for the README file
+// Note: The following code adds a prompt for the user to gather information needed for the README file
 
 inquirer
   .prompt([
@@ -53,7 +53,7 @@ inquirer
     },
   ])
   .then(answers => {
-    // Generate the README content based on user input
+    // Note: The following code generates the README content based on user input
     const readmeContent = `
 # ${answers.projectTitle}
 
@@ -89,7 +89,7 @@ For additional questions, you can reach me through GitHub: [${answers.githubUser
 Contact me via email at ${answers.email}.
     `;
 
-    // Write the README content to a file
+    // Note: The following code (writeFile) writes the README content to create a file containing the collected information and adds the info to the template you created above
     fs.writeFile('README.md', readmeContent, err => {
       if (err) {
         console.error('Error writing README file:', err);
